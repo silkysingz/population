@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type='text/javascript'>
+    google.charts.load('current', {'packages':['annotationchart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('date', 'Date');
+      data.addColumn('number', 'Banjul');
+      data.addColumn('string', 'Banjul title');
+      data.addColumn('string', 'Banjul text');
+      data.addColumn('number', 'Kanifing');
+      data.addColumn('string', 'Kanifing title');
+      data.addColumn('string', 'Kanifing text');
+      data.addColumn('number', 'Brikama');
+      data.addColumn('string', 'Brikama title');
+      data.addColumn('string', 'Brikama text');
+      data.addColumn('number', 'Mansakonko');
+      data.addColumn('string', 'Mansakonko title');
+      data.addColumn('string', 'Mansakonko text');
+      data.addColumn('number', 'Kerewan');
+      data.addColumn('string', 'Kerewan title');
+      data.addColumn('string', 'Kerewan text');
+      data.addColumn('number', 'Kuntaur');
+      data.addColumn('string', 'Kuntaur title');
+      data.addColumn('string', 'Kuntaur text');
+      data.addColumn('number', 'Janjangbureh');
+      data.addColumn('string', 'Janjangbureh title');
+      data.addColumn('string', 'Janjangbureh text');
+      data.addColumn('number', 'Basse');
+      data.addColumn('string', 'Basse title');
+      data.addColumn('string', 'Basse text');
+      
+      data.addRows([
+        [new Date(1973, 0, 1), 39179, 'Banjul', 'Population of Banjul in 1973', 39404, 'Kanifing', 'Population of Kanifing in 1973', 91013, 'Brikama', 'Population of Brikama in 1973', 42447, 'Mansakonko', 'Population of Mansakonko in 1973', 93338, 'Kerewan', 'Population of Kerewan in 1973', 47669, 'Kuntaur', 'Population of Kuntaur in 1973', 54232, 'Janjangbureh', 'Population of Janjangbureh in 1973', 86167, 'Basse', 'Population of Basse in 1973'],
+        [new Date(1983, 0, 1), 44188, 'Banjul', 'Population of Banjul in 1983', 101504, 'Kanifing', 'Population of Kanifing in 1983', 137245, 'Brikama', 'Population of Brikama in 1983', 55263, 'Mansakonko', 'Population of Mansakonko in 1983', 112225, 'Kerewan', 'Population of Kerewan in 1983', 57594, 'Kuntaur', 'Population of Kuntaur in 1983', 68410, 'Janjangbureh', 'Population of Janjangbureh in 1983', 111388, 'Basse', 'Population of Basse in 1983'],
+        [new Date(1993, 0, 1), 42326, 'Banjul', 'Population of Banjul in 1993', 228214, 'Kanifing', 'Population of Kanifing in 1993', 234917, 'Brikama', 'Population of Brikama in 1993', 55263, 'Mansakonko', 'Population of Mansakonko in 1993', 156462, 'Kerewan', 'Population of Kerewan in 1993', 57594, 'Kuntaur', 'Population of Kuntaur in 1993', 68410, 'Janjangbureh', 'Population of Janjangbureh in 1993', 111388, 'Basse', 'Population of Basse in 1993'],
+        [new Date(2003, 0, 1), 35061, 'Banjul', 'Population of Banjul in 2003', 322735, 'Kanifing', 'Population of Kanifing in 2003', 389594, 'Brikama', 'Population of Brikama in 2003', 72167, 'Mansakonko', 'Population of Mansakonko in 2003', 172835, 'Kerewan', 'Population of Kerewan in 2003', 78491, 'Kuntaur', 'Population of Kuntaur in 2003', 107212, 'Janjangbureh', 'Population of Janjangbureh in 2003', 182586, 'Basse', 'Population of Basse in 2003']
+      ]);
+
+      var chart = new google.visualization.AnnotationChart(document.getElementById('chart_div'));
+
+      var options = {
+        displayAnnotations: true,
+        title: 'Population of Gambian Regions (1973-2003)'
+      };
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+
+<body>
+  <div id='chart_div' style='width: 1500px; height: 700px;'></div>
+</body>
+</html>
